@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>American Meistermacher</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src = "/client.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+    <!-- Top navigation -->
+    <div class="topnav">
+
+    <!-- Centered link -->
+    <div class="topnav-centered">
+   <!---- <a href="#home" class="active">View</a> -->
+   <button id="button" onclick="openView()">View</button>
+   <script type="text/javascript">
+    function openView() {
+    window.open('canvasView.html', 'About Us', 'width=800,height=600')};
+   </script>
+  </div>
+    <!-- Centered2 link -->
+    <div class="topnav-centered2">
+      <!-- <a href="#home" class="active">Export</a> --> 
+      <button id="button" onclick="openExport()">Export</button>
+      <dialog>
+        Inhalt des Dialogs
+      </dialog>
+      <script type="text/javascript">
+        function openExport() {
+         document.getElementById("dialog").showModal();
+       };
+      </script>
+    </div>
+
+    <!-- Left-aligned links (default) -->
+  <img src="/images/icons/logo.png" alt="logo">
+ 
+  <div class="dropdown">
+    <button onclick="myDrop()" class="dropbtn">
+      <img src="/images/icons/plus.png" alt="Plus">
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">New</a>
+      <a href="#">Load</a>
+    </div>
+  </div> 
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myDrop() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+
+  <a href="#news"> Dortmund Dolphins</a> 
+
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <!--<a href="#search">Watch Film</a>-->
+    <div id="counterDiv2">
+       Coach Marko 
+  </div>
+      <div id="counterDiv2">
+        <div id="counter">0</div> users online
+    </div>
+    <div id="counterDiv2">
+     <a href="/goodbye.html">Logout</a> 
+    </div>
+    <!----
+    <div class="dropdown">
+      <button onclick="myDrop()" class="dropbtn">More</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="/help.html">Help</a>
+        <a href="/goodbye.html">Logout</a>
+      </div>
+    </div> 
+    <script>
+      /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myDrop() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+    </script>-->
+    
+  </div>
+
+</div>
+
+    </header>
+    <main>
+    <section>
+      <div class="tools-overview"> 
+        <!----
+        <button type="button"> All </button>
+        <button type="button"> Assets</button>
+        <button type="button"> Blocks </button>
+        -->
+        <div id="myBtnContainer">
+          <!--<button class="btn active" onclick="filterSelection('all')"> Show all</button>-->
+          <button class="btn active" onclick="filterSelection('arrows')"> Arrows</button>
+          <button class="btn" onclick="filterSelection('blocks')"> Blocks</button>
+          <button class="btn" onclick="filterSelection('letters')"> Letters</button>
+          <button class="btn" onclick="filterSelection('players')"> Players</button>
+          <button class="btn" onclick="filterSelection('templates')"> Templates</button>
+          <button class="btn" onclick="filterSelection('schrift')"> Text</button>
+          <input type="text" placeholder="Quick Add..">
+        </div>
+        <!-- <input type="text" placeholder="Search.."> -->
+      </div> 
+    </section>
+    <section>
+      <div class="tools-selection">
+      <!----
+        <ul>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+            <li>
+              <img src="/images/buttons/player.png" alt="player">
+            </li>
+        </ul>
+      -->
+
+
+<!-- Portfolio Gallery Grid -->
+<div id="myBtnContainer2">
+<div class="row">
+  <!--<div id="myBtnContainer2"> -->
+  <div class="column arrows">
+    <div class="content">
+      <button class="btn2 active" value ="1">
+        <img src="/images/icons/arrows/arrowLeft.png" alt="Pfeil links" id="pfeil_links"> 
+      </button>
+    </div>
+  </div>
+
+  <div class="column arrows">
+    <div class="content">
+      <button class="btn2" value ="2">
+        <img src="/images/icons/arrows/arrowRight.png" alt="Pfeil rechts" id="pfeil_rechts">
+      </button>
+  
+    </div>
+  </div>
+  <div class="column arrows">
+    <div class="content">
+      <button class="btn2" value ="3">
+        <img src="/images/icons/arrows/arrowDown.png" alt="Pfeil runter" id="pfeil_runter">
+      </button>
+    </div>
+  </div>
+  <div class="column arrows">
+    <div class="content">
+      <button class="btn2" value ="4">
+        <img src="/images/icons/arrows/arrowUp.png" alt="Pfeil hoch" id="pfeil_hoch">
+      </button>
+    </div>
+  </div>
+  
+
+
+  <div class="column blocks">
+    <div class="content">
+      <button class="btn2" value ="5">
+        <img src="/images/icons/blocks/circle.png" alt="Block1" id="block_1">
+      </button>
+    </div>
+  </div>
+  <div class="column blocks">
+    <div class="content">
+      <button class="btn2" value ="6">
+        <img src="/images/icons/blocks/halfCircleRight.png" alt="Block2" id="block_2">
+      </button>
+   
+    </div>
+  </div>
+  <div class="column blocks">
+    <div class="content">
+      <button class="btn2" value ="7">
+        <img src="/images/icons/klotz.png" alt="Block3" id="block_3">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column letters">
+    <div class="content">
+      <button class="btn2" value ="8">
+        <img src="/images/icons/letters/buchstabeA.png" alt="Letter A" id="letter_a">
+      </button>
+  
+    </div>
+  </div>
+  <div class="column letters">
+    <div class="content">
+      <button class="btn2" value ="9">
+        <img src="/images/icons/letters/buchstabeB.png" alt="Letter B" id="letter_b">
+      </button>
+      
+    </div>
+  </div>
+  <div class="column letters">
+    <div class="content">
+      <button class="btn2" value ="10">
+        <img src="/images/icons/letters/buchstabeC.png" alt="Letter C" id="letter_c">
+      </button>
+
+    </div>
+  </div>
+  <div class="column letters">
+    <div class="content">
+      <button class="btn2" value ="11">
+        <img src="/images/icons/letters/buchstabeZ.png" alt="Letter Z" id="letter_z">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value = "12">
+        <img src="/images/icons/players/Circle_Empty.png" class ="imgPlayer" id="circle_empty">
+      </button>
+  
+    </div>
+  </div>
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="13">
+        <img src="/images/icons/players/Circle_Left.png" class ="imgPlayer" id="circle_left">
+      </button>
+  
+    </div>
+  </div>
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="14">
+        <img src="/images/icons/players/Circle_Right.png" class ="imgPlayer" id="circle_right">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="15">
+        <img src="/images/icons/players/Circle_Middle.png" class ="imgPlayer" id="circle_middle">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="16">
+        <img src="/images/icons/players/Square_Empty.png" class ="imgPlayer" id="square_empty">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="17">
+        <img src="/images/icons/players/Square_Left.png" class ="imgPlayer" id="square_left">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="18">
+        <img src="/images/icons/players/Square_Right.png" class ="imgPlayer" id="square_right">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="19">
+        <img src="/images/icons/players/Square_Middle.png" class ="imgPlayer" id="square_middle">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column players">
+    <div class="content">
+      <button class="btn2" value ="20">
+        <img src="/images/icons/players/fullOL.png" class ="imgPlayer" id="full_OL">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="column templates">
+    <div class="content">
+      <button class="btn2" value ="21">
+        <img src="/images/icons/template.png" alt="Template1" id="template_1">
+      </button>
+
+    </div>
+  </div>
+  <div class="column templates">
+    <div class="content">
+      <button class="btn2" value ="22">
+        <img src="/images/icons/template.png" alt="Template2" id="template_2">
+      </button>
+   
+    </div>
+  </div>
+
+  <div class="column templates">
+    <div class="content">
+      <button class="btn2" value ="23">
+        <img src="/images/icons/template.png" alt="Template3" id="template_3">
+      </button>
+
+  </div>
+  </div>
+  
+  <div class="column schrift">
+    <div class="content">
+      <button class="btn2" value ="24">
+        <img src="/images/icons/text.png" alt="Text1" id="text_1">
+      </button>
+ 
+    </div>
+  </div>
+
+  <div class="column schrift">
+    <div class="content">
+      <button class="btn2" value ="25">
+        <img src="/images/icons/text.png" alt="Text2" id="text_2">
+      </button>
+   
+    </div>
+  </div>
+  <div class="column schrift">
+    <div class="content">
+      <button class="btn2" value ="26">
+        <img src="/images/icons/text.png" alt="Text3" id="text_3">
+      </button>
+   
+  </div>
+  </div>
+</div>
+<script>
+  //var currentSelectedTool = 0;
+  /*function SetCurrentTool(number) {
+    if (currentSelectedTool == number){
+      currentSelectedTool = 0;
+    }
+    else {
+      currentSelectedTool = number;
+    }
+  //alert(currentSelectedTool);  
+  }*/
+
+  filterSelection("arrows") 
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  // Add active class to the current button (highlight it) in the Tools Selection
+  var btnContainer2 = document.getElementById("myBtnContainer2");
+  var btns2 = btnContainer2.getElementsByClassName("btn2");
+  for (var i = 0; i < btns2.length; i++) {
+    btns2[i].addEventListener("click", function(){
+      var current2 = document.getElementsByClassName("active");
+      current2[1].className = current2[1].className.replace(" active", "");
+      this.className += " active";
+      if (currentSelectedTool>0) {
+        this.className.replace(" active", "");
+     }
+    });
+  }
+  </script>
+  </div> 
+    </section>
+    <section id="main-area">
+        <ul>
+          <li>
+            <div id="slides">
+              <ul class="links">
+                <!--<li>
+                  <div id = "singleSlide1" width="150" height="50">
+                    <h3>Tacticslides</h3>
+                  </div>
+                </li>-->
+                <h3>Tacticslides</h3>
+                <li>
+                  <div id = "singleSlide2">
+                    <img src="/images/field_scaled.png" width="150" height="150" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div id = "singleSlide2">
+                    <img src="/images/field_scaled.png" width="150" height="150" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div id = "singleSlide2">
+                    <img src="/images/field_scaled.png" width="150" height="150" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div id = "singleSlide2">
+                    <img src="/images/field_scaled.png" width="150" height="150" alt="">
+                  </div>
+                </li>
+              
+
+              </ul>
+           
+              
+            </div>
+          
+          </li>
+
+          <li>
+            <div id="wrapper">
+            <canvas id="canvas" width="1050" height="600"> </canvas>
+            <div id="controls">
+          
+
+              <div id="widthControl" title="choose a line width">
+                <div class="widthExample"></div>
+                <div class="widthExample"></div>
+                <div class="widthExample"></div>
+                <div class="widthExample"></div>
+                <div class="widthExample"></div>
+              </div>
+              <div id="palette" title="choose a color"></div>
+      
+              <div id="clearBtn" title="clear the canvas">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </div>
+
+              <div id="arrowBtn" title="draw arrow">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+              </div>
+      
+              <div id="counterDiv">
+                <span id="counter">0</span> users <br />are online
+              </div>
+            </div>
+            </div>
+          </li>
+          <li>
+          
+                <button id="statsButton" class ="statsButtons" onclick="myFunction1()">Statistics</button>
+                <button id="videoButton" class ="statsButtons" onclick="myFunction2()">Video Analysis</button>
+         
+           
+            <div id="stats">
+              <button id="teamButton" class ="statsButtons" onclick="myFunction3()">TeamStats</button>
+              <button id="playerButton" class ="statsButtons" onclick="myFunction4()">PlayerStats</button>
+              </div>
+
+              <div id="teamstats">
+                <h2>
+                  TEAM STATISTICS
+                </h2>  
+                <h3>Team Name: Dortmund Dolphins</h3>
+                <p>Total Yards / Game: 523.5</p>
+                <p>Run Yards / Game: 245.3</p>
+                <p>Pass Yards / Game: 278.2</p>
+                <p>Turnovers / Game: 2.6 </p>
+              </div>  
+              </div>
+              <div id="playerstats">
+                <h3> Player Statistics </h3>
+                <img src="/images/example_headshot.jpg" style ="display: block; position: relative; margin: auto; width:120px; height: 100px; padding: 10px">
+                <p id ="playerStatsInfo"> Max Mustermann </p>
+                <p id ="playerStatsInfo"> #99 </p>
+                <p id ="playerStatsInfo"> Height: 195cm </p>
+                <p id ="playerStatsInfo"> Weight: 125kg </p>
+                <p id ="playerStatsText">Receiving Yards: 1200</p>
+                <p id ="playerStatsText">Avg.: 20</p>
+                <p id ="playerStatsText">Avg. / Game: 6</p>
+                <p id ="playerStatsText">TD: 6</p>
+                <p id ="playerStatsText">Long: 68</p>
+                
+              </div>  
+              </div>
+              <div id="video">
+                <h2>
+                  Watch Video and Draw your map accordingly
+                </h2>
+                <h3>
+                  Current Videoname: American Football Clip 1
+                </h3>
+                <video width="320" height="270" controls autoplay>
+
+                  <source src="/videos/soccer.mp4" type="video/mp4" </source>
+
+                </video>
+                <button>Load Other video</button>
+                </div>   
+              
+
+                         
+              <script>
+              var toggleA = false;
+              function myFunction1() {
+                var x = document.getElementById("stats");
+                var y = document.getElementById("video");
+                var t = document.getElementById("teamstats");
+                var p = document.getElementById("playerstats");
+
+                x.style.display = "block";
+                y.style.display = "none";
+                p.style.display = "none";
+                t.style.display = "block";
+              }
+              </script>  
+              <script>
+                  function myFunction2() {
+                  var x = document.getElementById("stats");
+                  var y = document.getElementById("video");
+                  var t = document.getElementById("teamstats");
+                  var p = document.getElementById("playerstats");
+
+                  x.style.display = "none";
+                  t.style.display = "none";
+                  p.style.display = "none";
+                  y.style.display = "block";
+                  }
+               </script>
+                  <script>
+                    function myFunction3() {
+                      var z = document.getElementById("teamstats");
+                      var a = document.getElementById("playerstats");
+                      z.style.display = "block";
+                      a.style.display = "none";
+                }
+                </script> 
+                     <script>
+                      function myFunction4() {
+                        var z = document.getElementById("teamstats");
+                        var a = document.getElementById("playerstats");
+                        z.style.display = "none";
+                        a.style.display = "block";
+                      }
+                      </script>   
+          </li>
+        </ul>
+   </section>
+  </main>
+  </body>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="./client.js"></script>
+</html>

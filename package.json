@@ -1,0 +1,20 @@
+{
+  "name": "american-meister",
+  "version": "1.0.0",
+  "description": "simple version of american meistermacher",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Michael Hoffmann & Yannik Rohrschneider",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "keywords": []
+}
